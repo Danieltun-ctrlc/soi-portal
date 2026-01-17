@@ -1,5 +1,5 @@
 import Nav from "./header";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import "../assets/diplomas.css";
 import DTECH from "../assets/diploma-in-information-technology.jpg";
 import DAA from "../assets/diploma-in-applied-ai-and-analytics.jpg";

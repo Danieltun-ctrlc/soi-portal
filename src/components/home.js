@@ -16,7 +16,7 @@ import FT from "../assets/fintechh.png";
 import CC from "../assets/cloudcomputing.jpg";
 import CB from "../assets/cloudbannert.jpg";
 
-function One_slide(props) {
+function OneSlide(props) {
   return (
     <div className="slide-box">
       <div
@@ -31,19 +31,19 @@ function One_slide(props) {
   );
 }
 
-function Slide_diploma_list() {
+function SlideDiplomaList() {
   return (
     <div className="slides">
-      <One_slide label="IT" type={it} />
-      <One_slide label="DFT" type={fintech} />
-      <One_slide label="DAAA" type={ai} />
-      <One_slide label="DCS" type={cyber} />
-      <One_slide label="DCCM" type={CB} />
+      <OneSlide label="IT" type={it} />
+      <OneSlide label="DFT" type={fintech} />
+      <OneSlide label="DAAA" type={ai} />
+      <OneSlide label="DCS" type={cyber} />
+      <OneSlide label="DCCM" type={CB} />
     </div>
   );
 }
 
-function Welcome_Content() {
+function WelcomeContent() {
   return (
     <div className="content">
       <h2>Welcome to the School of the INFOCOMM</h2>
@@ -214,8 +214,8 @@ export default function Home() {
     <div className="main">
       <Nav />
       <Banner />
-      <Slide_diploma_list />
-      <Welcome_Content />
+      <SlideDiplomaList />
+      <WelcomeContent />
       <ScrollText />
     </div>
   );

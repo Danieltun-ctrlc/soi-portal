@@ -1,11 +1,4 @@
-import { useEffect, useState, useRef } from "react";
-import {
-  Link,
-  useParams,
-  Outlet,
-  useNavigate,
-  useOutletContext,
-} from "react-router-dom";
+import { useParams, Outlet, useNavigate } from "react-router-dom";
 import "../assets/diploma.css";
 import DTECH from "../assets/diploma-in-information-technology.jpg";
 import DAA from "../assets/diploma-in-applied-ai-and-analytics.jpg";

@@ -1,11 +1,4 @@
-import { useEffect, useState, useRef } from "react";
-import {
-  Link,
-  useParams,
-  Outlet,
-  useNavigate,
-  useOutletContext,
-} from "react-router-dom";
+import { useParams, useOutletContext } from "react-router-dom";
 
 export default function Module() {
   let { moduleId } = useParams();
