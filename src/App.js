@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HOME from "./components/home.js";
+import DIP from "./components/diplomas.js";
+import DIPO from "./components/diploma.js";
+import MO from "./components/module.js";
+import FavPage from "./components/favorite.js";
+import Register from "./components/register.js";
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  let [fav, setFav] = useState(["DTECH"]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<HOME />} />
+        <Route path="/diplomas" element={<DIP />}>
+          <Route
+            path=":diplomaId"
+            element={<DIPO fav={fav} setting={setFav} />}
+          >
+            <Route path=":moduleId" element={<MO />} />
+          </Route>
+        </Route>
+        <Route path="/fav" element={<FavPage fav={fav} setting={setFav} />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
     </div>
   );
 }
